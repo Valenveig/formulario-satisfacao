@@ -1,0 +1,165 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fce8ee;
+    padding: 20px;
+    color: #8e4b72;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #d46a92;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #4a3645;
+  }
+  
+  /* === Campos de formulário: input, select, textarea === */
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea,
+  .choices__inner {
+    width: 100%;
+    max-width: 100%;
+    height: 44px;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #4a3645;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  /* Textarea ajustes */
+  textarea {
+    height: auto;
+    min-height: 100px;
+    max-height: 150px;
+    resize: vertical;
+  }
+  
+  /* Hover */
+  input:hover,
+  textarea:hover,
+  select:hover,
+  .choices__inner:hover {
+    background-color: #fce8ee;
+    border-color: #d3618e;
+  }
+  
+  /* Focus */
+  input:focus,
+  textarea:focus,
+  select:focus,
+  .is-focused .choices__inner {
+    background-color: #f9e6ec;
+    border-color: #dd6a98;
+    outline: none;
+    box-shadow: 0 0 5px #e973a2;
+    color: #4a3645;
+  }
+  
+  /* === Choices.js Custom === */
+  .choices__inner {
+    background-color: #fce8ee;
+    border: 1px solid #d3618e;
+    border-radius: 6px;
+    padding: 10px 12px;
+  }
+  
+  /* Seta */
+  .choices__arrow {
+    border-color: #c481b3 transparent transparent;
+  }
+  
+  /* Lista de opções */
+  .choices__list--dropdown .choices__item--selectable {
+    background-color: #ffffff;
+    color: #653058;
+    padding: 10px;
+  }
+  
+  /* Hover da opção */
+  .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: #f083a7;
+    color: #4a3645;
+  }
+  
+  /* Estrelas */
+  .stars {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    direction: rtl;
+  }
+  
+  .stars input {
+    display: none;
+  }
+  
+  .stars label {
+    font-size: 24px;
+    cursor: pointer;
+    color: #e3a2cb;
+    transition: color 0.2s;
+  }
+  
+  .stars input:checked ~ label,
+  .stars label:hover,
+  .stars label:hover ~ label {
+    color: #f35b95;
+  }
+  
+  /* Botão */
+  button {
+    background-color: #e26b93;
+    color: #fbe6f6;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    display: block;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #de5482;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 20px;
+      margin: 10px;
+    }
+    
+    button {
+      width: 100%; /* botão ocupa toda a largura na tela pequena */
+    }
+    
+    .stars label {
+      font-size: 20px; /* estrelas menores em celular */
+    }
+  }
+  
